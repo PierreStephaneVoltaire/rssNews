@@ -14,10 +14,15 @@
 
 
 <ion-content padding>
-<div *ngFor="let item of Item?.rss" >
-<button class="button button-block button-balanced">
-   {{Item?.title}}
-</button>
+<div *ngFor="let item of Item" >
+<h2>
+   {{item.category}}
+</h2>
+<div *ngFor="let feed of item.feed" >
+  <button ion-button full outline>
+    {{feed.title}}
+  </button>
+</div>
 
 </div>
 </ion-content>

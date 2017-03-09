@@ -9,13 +9,15 @@ import { NavController, NavParams } from 'ionic-angular';
 */
 @Component({
   selector: 'page-feed',
-  templateUrl: 'feed.html'
+  templateUrl: 'feed.html',
+
+
 })
 export class FeedPage {
 Item:any;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.Item=this.navParams.get("Item");
-    console.log(this.Item);
+    console.log("in feed",this.Item);
   }
 
   ionViewDidLoad() {

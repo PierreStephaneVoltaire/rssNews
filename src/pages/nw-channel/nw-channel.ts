@@ -14,15 +14,16 @@ import{ FeedPage}from'../feed/feed';
   templateUrl: 'nw-channel.html'
 })
 export class NwChannelPage {
-@Input()Item;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {console.log(this.Item);}
+@Input()Item:any;
+  constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad NwChannelPage');
   }
-  itemIsSelected(event, Item) {
+
+  itemIsSelected(event, feeds) {
     this.navCtrl.push(FeedPage, {
-      Item: Item
+      Item: feeds
     });
   }
 }

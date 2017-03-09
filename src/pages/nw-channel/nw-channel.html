@@ -5,6 +5,6 @@
   Ionic pages and navigation.
 -->
 
-<button ion-button full outline (click)='itemIsSelected()' >
+<button ion-button full outline (click)='itemIsSelected($event,Item.rss)' >
      <h2>{{Item?.name}}</h2>
    </button>
