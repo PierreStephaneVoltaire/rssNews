@@ -8,7 +8,8 @@ import { TabsPage } from '../pages/tabs/tabs';
 import {Localstorage }from '../providers/localstorage';
 import{NwListPage}from'../pages/nw-list/nw-list';
 import{NwChannelPage}from'../pages/nw-channel/nw-channel';
-import{FeedPage}from'../pages/feed/feed'
+import{FeedPage}from'../pages/feed/feed';
+import { HttpModule, JsonpModule } from '@angular/http';
 @NgModule({
   declarations: [
     MyApp,
@@ -21,7 +22,9 @@ import{FeedPage}from'../pages/feed/feed'
     FeedPage
   ],
   imports: [
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    HttpModule,
+   JsonpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

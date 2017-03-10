@@ -11,7 +11,7 @@ export class Localstorage {
   	"news": [{
   		"name": "cbc",
   		"logo":"https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/CBC_News_Logo.svg/175px-CBC_News_Logo.svg.png",
-  		"description":"CBC News is the division of the Canadian Broadcasting Corporation responsible for the news gathering and production of news programs on the corporation's English-language operations, namely CBC Television, CBC Radio, CBC News Network, and CBC.ca. Founded in 1941, CBC News is the largest news broadcaster in Canada and has local, regional and national broadcasts and stations.(wikipedia)",
+  		"description":"CBC News is the largest news broadcaster in Canada and has local, regional and national broadcasts and stations.(wikipedia)",
   		"rss": [{
   			"category": "general",
   			"feed": [{

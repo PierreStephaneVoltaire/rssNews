@@ -4,7 +4,18 @@
   See http://ionicframework.com/docs/v2/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-
-<button ion-button full outline (click)='itemIsSelected($event,Item.rss)' >
-     <h2>{{Item?.name}}</h2>
-   </button>
+   <ion-item-sliding>
+<ion-item (click)='itemIsSelected($event,Item.rss)'>
+    <ion-avatar item-left>
+      <img src="{{Item.logo}}">
+    </ion-avatar>
+    <h2>{{Item.name}}</h2>
+    <h4>{{Item.description}}</h4>
+  </ion-item>
+  <ion-item-options side="right">
+    <button ion-button color="primary">
+      <ion-icon name="chart"></ion-icon>
+      analysis
+    </button>
+  </ion-item-options>
+</ion-item-sliding>
