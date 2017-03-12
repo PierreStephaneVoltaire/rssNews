@@ -4,6 +4,28 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
 
+
+export class FeedItem {
+  description: string;
+  link: string;
+  title: string;
+
+  constructor(description: string, link: string, title: string) {
+    this.description = description;
+    this.link = link;
+    this.title = title;
+  }
+}
+
+export class Feed {
+  title: string;
+  url: string;
+
+  constructor(title: string, url: string) {
+    this.title = title;
+    this.url = url;
+  }
+}
 @Injectable()
 export class NewsService {
 feed:any;
@@ -16,17 +38,31 @@ setUrl(Feedurl:string){
     this.url=Feedurl;
     console.log("in service",this.url);
 }
-getFeed(): Observable<Object[]> {
-  console.log("in get");
-   return this.http.get(this.url)
-                   .map(this.extractData)
-                   .catch(this.handleError);
+getFeed(){
+let articles=[];
+return this.http.get(this.url)
+.map(data=>data.json()['query']['result'])
+.map((res)=>{
+  if(res==null){return articles;}
+let objects=res['item'];
+ for (let i = 0; i < objects.length; i++) {
+ let item = objects[i];
+let newFeedItem = new FeedItem(item.description, item.link, item.title);
+ articles.push(newFeedItem);
  }
 
+ }
+).subscribe(res => {
+      articles = res;
+     return articles});
+
+  }
+
  private extractData(res: Response) {
-   console.log("in extract data",res);
-   let body = res.json();
-   return body.data || { };
+   console.log("i",res);
+   let body = res.text();
+   console.log(body);
+   return body;
  }
 
  ParseXML(val):any
@@ -39,16 +75,6 @@ getFeed(): Observable<Object[]> {
 
 
  private handleError (error: Response | any) {
-   // In a real world app, you might use a remote logging infrastructure
-   let errMsg: string;
-   if (error instanceof Response) {
-     const body = error.json() || '';
-     const err = body.error || JSON.stringify(body);
-     errMsg = `${error.status} - ${error.statusText || ''} ${err}`;
-   } else {
-     errMsg = error.message ? error.message : error.toString();
-   }
-   console.error(errMsg);
-   return Observable.throw(errMsg);
+  console.log("didn't work");
  }
 }
