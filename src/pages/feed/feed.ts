@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component,Inject } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-
+import'xml-to-json';
+import{load}from'rss-to-json';
+import {NewsService}from'../../providers/news-service';
 /*
   Generated class for the Feed page.
 
@@ -12,10 +14,11 @@ import { NavController, NavParams } from 'ionic-angular';
   templateUrl: 'feed.html',
 
 
+
 })
 export class FeedPage {
 Item:any;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(@Inject(NewsService)public navCtrl: NavController, public navParams: NavParams,private news:NewsService ) {
     this.Item=this.navParams.get("Item");
     console.log("in feed",this.Item);
   }
@@ -24,4 +27,10 @@ Item:any;
     console.log('ionViewDidLoad FeedPage');
   }
 
+  stuff(feeds) {
+this.news.setUrl("https://crossorigin.me/https://"+feeds);
+
+    console.log(this.news.getFeed())
+
+  }
 }

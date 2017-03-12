@@ -19,7 +19,7 @@
    {{item.category}}
 </h2>
 <div *ngFor="let feed of item.feed" >
-  <button ion-button full outline>
+  <button ion-button full outline (click)='stuff(feed.link)'>
     {{feed.title}}
   </button>
 </div>

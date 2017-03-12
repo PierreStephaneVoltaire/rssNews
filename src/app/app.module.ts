@@ -10,6 +10,7 @@ import{NwListPage}from'../pages/nw-list/nw-list';
 import{NwChannelPage}from'../pages/nw-channel/nw-channel';
 import{FeedPage}from'../pages/feed/feed';
 import { HttpModule, JsonpModule } from '@angular/http';
+import {NewsService}from'../providers/news-service';
 @NgModule({
   declarations: [
     MyApp,
@@ -37,6 +38,6 @@ import { HttpModule, JsonpModule } from '@angular/http';
     NwChannelPage,
     FeedPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},Localstorage]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},Localstorage,NewsService]
 })
 export class AppModule {}
