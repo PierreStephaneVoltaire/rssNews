@@ -1,7 +1,6 @@
 import { Component,Inject } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import'xml-to-json';
-import{load}from'rss-to-json';
+
 import {NewsService}from'../../providers/news-service';
 /*
   Generated class for the Feed page.
@@ -28,9 +27,9 @@ Item:any;
   }
 
   stuff(feeds) {
-this.news.setUrl("https://crossorigin.me/https://"+feeds);
+this.news.setUrl(feeds);
 
-    console.log(this.news.getFeed())
+    console.log(this.news.getUrl())
 
   }
 }
