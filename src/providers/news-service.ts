@@ -15,12 +15,13 @@ import{load}from'rss-to-json';
 @Injectable()
 export class NewsService {
 url:string;
-  constructor(private jsonp: Jsonp) {
+  constructor(private jsonp: Jsonp,public http:Http) {
     console.log('Hello NewsService Provider');
   }
-setUrl(url:string){this.url=url;}
+setUrl(url:string){this.url="https://crossorigin.me/"+url;}
 getUrl(){
-  return this.jsonp
+
+  return this.http
              .get(this.url)
             .map(response => response.text())
              .subscribe(val => console.log(val));
