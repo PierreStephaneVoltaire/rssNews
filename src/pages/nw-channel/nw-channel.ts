@@ -21,7 +21,7 @@ export class NwChannelPage {
     console.log('ionViewDidLoad NwChannelPage');
   }
 
-  itemIsSelected(event, feeds) {
+  itemIsSelected(event, feeds):void{
     this.navCtrl.push(FeedPage, {
       Item: feeds
     });

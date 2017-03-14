@@ -210,7 +210,7 @@ export class Localstorage {
     console.log("not suported");
   }
   }
-  get(){
+  get():string{
     var cbc=localStorage.getItem("names");
 
     return cbc;

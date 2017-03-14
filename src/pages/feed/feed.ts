@@ -26,9 +26,10 @@ Item:any;
     console.log('ionViewDidLoad FeedPage');
   }
 
-  stuff(feeds) {
+  stuff(feeds):void{
+      //set the rss feed url
 this.news.setUrl(feeds);
-
+//test to see if i can actually get the rss
     console.log(this.news.getUrl())
 
   }

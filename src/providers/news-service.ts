@@ -3,8 +3,9 @@ import { Http,Response, Jsonp } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
-import'xml-to-json';
-import{load}from'rss-to-json';
+import {toJson,JsonOptions} from 'xml-to-json';
+import {NewsItem}from'../../news-item'
+import * as $ from 'jquery';
 
 /*
   Generated class for the NewsService provider.
@@ -19,12 +20,28 @@ url:string;
     console.log('Hello NewsService Provider');
   }
 setUrl(url:string){this.url="https://crossorigin.me/"+url;}
-getUrl(){
+getUrl():any{
 
   return this.http
              .get(this.url)
             .map(response => response.text())
              .subscribe(val => console.log(val));
+}
+
+
+parseFeed(feed:string):any[]{
+   
+    let xmlfeed=$.parseXML(feed);
+    $(xmlfeed).find('item').each(function(){
+      let newsitem=new NewsItem();
+        newsitem.title=$(this).find('title');
+    }
+        
+        
+    )
+  
+    
+    
 }
 
 }
