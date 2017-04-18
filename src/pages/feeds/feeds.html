@@ -1,0 +1,44 @@
+<!--
+  Generated template for the Feeds page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>News feeds</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+  <ion-item>
+    <ion-label fixed>search</ion-label>
+    <ion-input [(ngModel)]="searchTerm" (change)='filter(searchTerm)' type="text" (keyup)="0"></ion-input>
+   <ion-searchbar ></ion-searchbar>
+  </ion-item>
+
+</ion-list>
+{{search}}
+  <div *ngFor="let item of Item" >
+    <ion-card (tap)='itemIsSelected($event,item.getLink())' >
+      <ion-card-content>
+   <ion-card-title>
+       {{item.getTitle()}}
+    </ion-card-title>
+      <p>
+         {{item.getDescription()|sanitizer}}
+      </p>
+      <p>
+        by {{item.getAuthor()}}
+      </p>
+      <p>
+        {{item.getPubDate()}}
+      </p>
+    </ion-card-content>
+  </ion-card>
+  </div>
+</ion-content>
