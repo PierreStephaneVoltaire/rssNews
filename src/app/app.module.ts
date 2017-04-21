@@ -16,7 +16,6 @@ import '../../node_modules/chart.js/dist/Chart.bundle.min.js';
 import{HttpNews}from'../providers/http-news';
 import { HttpModule } from '@angular/http';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
-import{FilterNews}from'../pipes/filter-news'
 @NgModule({
   declarations: [
     MyApp,
@@ -25,8 +24,7 @@ import{FilterNews}from'../pipes/filter-news'
     Categories,
     Charts,
     SanitizeData,
-    Feeds ,
-    FilterNews
+    Feeds 
   ],
   imports: [
     BrowserModule,
