@@ -17,7 +17,7 @@ export class HomePage {
          let jsonstring:string=`{
 	"news": [{
 			"name": "cbc"
-			, "logo": "/android_asset/www/assets/images/cbc.jpg"
+			, "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/CBC_News_Logo.svg/175px-CBC_News_Logo.svg.png"
 			, "description": "CBC News is the largest news broadcaster in Canada and has local, regional and national broadcasts and stations.(wikipedia)"
 			, "rss": [{
 				"category": "general"
@@ -160,7 +160,7 @@ export class HomePage {
 		}]
 	}, {
 			"name": "Global news"
-			, "logo": "/android_asset/www/assets/images/gn.png"
+			, "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Global_News.svg/220px-Global_News.svg.png"
 			, "description": "Global News is the news and current affairs division of Global Television Network in Canada, overseeing all local and national news programming on the network's twelve owned-and-operated stations (O&Os)."
 			, "rss": [{
 				"category": "general"
@@ -207,7 +207,7 @@ export class HomePage {
 		}]
 	}, {
 			"name": "Yahoo News!"
-			, "logo": "/android_asset/www/assets/images/yahoo.png"
+			, "logo": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Yahoo%21News.png"
 			, "description": "Yahoo News originated as an internet-based news aggregator by Yahoo. Articles originally came from news services such as Associated Press, Reuters, Fox News, Al Jazeera, ABC News, USA Today, CNN.com, BBC News, etc."
 			, "rss": [{
 				"category": "RSS Feeds"
@@ -233,7 +233,7 @@ export class HomePage {
 		}]
 	}, {
 			"name": "abc news"
-			, "logo": "/android_asset/www/assets/images/abc.png"
+			, "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/f/fa/ABCNewsLogo.png/250px-ABCNewsLogo.png"
 			, "description": "ABC News is the news division of the American Broadcasting Company (ABC), owned by the Disney Media Networks division of The Walt Disney Company. "
 			, "rss": [{
 				"category": "ABCNews.com News Feeds"
@@ -282,7 +282,7 @@ export class HomePage {
 
 		{
 			"name": "CTV news"
-			, "logo": "/android_asset/www/assets/images/ctv.png"
+			, "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/CTV_News.svg/200px-CTV_News.svg.png"
 			, "description": "CTV News is the news division of the CTV Television Network in Canada."
 			, "rss": [{
 					"category": "NATIONAL FEEDS"
@@ -385,7 +385,7 @@ export class HomePage {
 
 		{
 			"name": "cnn"
-			, "logo": "/android_asset/www/assets/images/cnn.png"
+			, "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Cnn.svg/150px-Cnn.svg.png"
 			, "description": "The Cable News Network (CNN) is an American basic cable and satellite television news channel owned by the Turner Broadcasting System division of Time Warner"
 			, "rss": [{
 				"category": "RSS Feeds"
