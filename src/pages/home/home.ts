@@ -17,7 +17,7 @@ export class HomePage {
          let jsonstring:string=`{
 	"news": [{
 			"name": "cbc"
-			, "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/CBC_News_Logo.svg/175px-CBC_News_Logo.svg.png"
+			, "logo": "../assets/images/cbc.jpg"
 			, "description": "CBC News is the largest news broadcaster in Canada and has local, regional and national broadcasts and stations.(wikipedia)"
 			, "rss": [{
 				"category": "general"
@@ -160,7 +160,7 @@ export class HomePage {
 		}]
 	}, {
 			"name": "Global news"
-			, "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Global_News.svg/220px-Global_News.svg.png"
+			, "logo": "../assets/images/gn.png"
 			, "description": "Global News is the news and current affairs division of Global Television Network in Canada, overseeing all local and national news programming on the network's twelve owned-and-operated stations (O&Os)."
 			, "rss": [{
 				"category": "general"
@@ -207,7 +207,7 @@ export class HomePage {
 		}]
 	}, {
 			"name": "Yahoo News!"
-			, "logo": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Yahoo%21News.png"
+			, "logo": "../assets/images/yahoo.png"
 			, "description": "Yahoo News originated as an internet-based news aggregator by Yahoo. Articles originally came from news services such as Associated Press, Reuters, Fox News, Al Jazeera, ABC News, USA Today, CNN.com, BBC News, etc."
 			, "rss": [{
 				"category": "RSS Feeds"
@@ -233,8 +233,8 @@ export class HomePage {
 		}]
 	}, {
 			"name": "abc news"
-			, "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Global_News.svg/220px-Global_News.svg.png"
-			, "description": "Global News is the news and current affairs division of Global Television Network in Canada, overseeing all local and national news programming on the network's twelve owned-and-operated stations (O&Os)."
+			, "logo": "../assets/images/abc.png"
+			, "description": "ABC News is the news division of the American Broadcasting Company (ABC), owned by the Disney Media Networks division of The Walt Disney Company. "
 			, "rss": [{
 				"category": "ABCNews.com News Feeds"
 				, "feed": [{
@@ -282,8 +282,8 @@ export class HomePage {
 
 		{
 			"name": "CTV news"
-			, "logo": ""
-			, "description": ""
+			, "logo": "../assets/images/ctv.png"
+			, "description": "CTV News is the news division of the CTV Television Network in Canada."
 			, "rss": [{
 					"category": "NATIONAL FEEDS"
 					, "feed": [{
@@ -307,15 +307,6 @@ export class HomePage {
 			}, {
 						"title": "Business Headlines"
 						, "link": "http://www.ctvnews.ca/rss/business/ctv-news-business-headlines-1.867648"
-			}, {
-						"title": "Technology Headlines"
-						, "link": "http://feeds.abcnews.com/abcnews/technologyheadlines"
-			}, {
-						"title": "Health Headlines"
-						, "link": "http://feeds.abcnews.com/abcnews/healthheadlines"
-			}, {
-						"title": "Entertainment Headlines"
-						, "link": "http://feeds.abcnews.com/abcnews/entertainmentheadlines"
 			}, {
 						"title": "Auto Headlines"
 						, "link": "http://www.ctvnews.ca/rss/autos/ctv-news-autos-1.867636"
@@ -394,7 +385,7 @@ export class HomePage {
 
 		{
 			"name": "cnn"
-			, "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Cnn.svg/150px-Cnn.svg.png"
+			, "logo": "../assets/images/cnn.png"
 			, "description": "The Cable News Network (CNN) is an American basic cable and satellite television news channel owned by the Turner Broadcasting System division of Time Warner"
 			, "rss": [{
 				"category": "RSS Feeds"

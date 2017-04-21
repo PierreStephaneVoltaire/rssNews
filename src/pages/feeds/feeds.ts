@@ -31,10 +31,12 @@ Item:NewsItem[];
 filter(input:string):void{
     console.log("in FILTER");
     console.log(this.Item);
+    
 if(input==null||input.trim()==""){
    this.navParams.get("Item").subscribe(result => this.Item = result);
 }
 else{
+
   console.log(this.Item);
  this.Item = this.Item.filter(item=>{
         return this.check(input,item);
