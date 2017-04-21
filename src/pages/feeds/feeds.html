@@ -24,7 +24,7 @@
 </ion-list>
 {{search}}
   <div *ngFor="let item of Item" >
-    <ion-card (tap)='itemIsSelected($event,item.getLink())' >
+    <ion-card (click)='itemIsSelected($event,item.getLink())'tappable >
       <ion-card-content>
    <ion-card-title>
        {{item.getTitle()}}

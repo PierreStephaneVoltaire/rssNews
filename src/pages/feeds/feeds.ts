@@ -26,7 +26,7 @@ Item:NewsItem[];
  this.navParams.get("Item").subscribe(result => this.Item = result);
   }
   check(input:string,item:NewsItem):boolean{
-    return item.getDescription().includes(input)||item.getTitle().includes(input)||item.getAuthor().includes(input);
+    return item.getDescription().toUpperCase().includes(input)||item.getTitle().toUpperCase().includes(input)||item.getAuthor().toUpperCase().includes(input);
   }
 filter(input:string):void{
     console.log("in FILTER");
@@ -39,7 +39,7 @@ else{
 
   console.log(this.Item);
  this.Item = this.Item.filter(item=>{
-        return this.check(input,item);
+        return this.check(input.toUpperCase(),item);
       });
 
 }
@@ -51,8 +51,6 @@ itemIsSelected(event, feeds:string):void{
    var target = '_self';
   
   this.iab.create(url,target);
-//const Appbrowser = this.iab.create(url);
-//Appbrowser.show
 
   }
 

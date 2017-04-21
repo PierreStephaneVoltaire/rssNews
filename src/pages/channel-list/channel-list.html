@@ -8,7 +8,7 @@
   <h2> News channels</h2>
   <ion-list>
      <ion-item-sliding *ngFor="let Item of Items">
-<ion-item (tap)='itemIsSelected($event,Item.rss)' >
+<ion-item (click)='itemIsSelected($event,Item.rss)'tappable >
     <ion-avatar item-left>
       <img src="{{Item.logo}}">
     </ion-avatar>
@@ -16,12 +16,12 @@
     <h4>{{Item.description}}</h4>
   </ion-item>
   <ion-item-options side="right">
-    <button ion-button color="primary" (tap)='itemSelected($event,Item)'>
+    <button ion-button color="primary" (click)='itemSelected($event,Item)'tappable>
       <ion-icon name="chart"></ion-icon>
       analysis
     </button>
   </ion-item-options>
 </ion-item-sliding>   
-<button ion-button full color="primary" (tap)='buttonSelected($event,Items)' >Compare news channels</button>
+<button ion-button full color="primary" (click)='buttonSelected($event,Items)' tappable>Compare news channels</button>
   </ion-list>
 </ion-content>

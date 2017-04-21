@@ -21,7 +21,7 @@
  </ion-card-header>
  <div *ngFor="let feed of item.feed">
    <ion-list  >
-       <button ion-item  (tap)='getNewsArticles(feed.link)'>
+       <button ion-item  (click)='getNewsArticles(feed.link)' tappable>
     {{feed.title}}
   </button>
 
