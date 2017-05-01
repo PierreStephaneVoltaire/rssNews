@@ -27,7 +27,7 @@ export class ChannelList {
 
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ChannelList');
+    
   }
 
  buttonSelected(event, channels):void{

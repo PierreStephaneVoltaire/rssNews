@@ -13,6 +13,7 @@ export class SanitizeData implements PipeTransform {
   /**
    * Takes a value and makes it lowercase.
    */
+  //warning regex monster bellow
   transform(value: string) {
     value = value + ''; // make sure it's a string
     value = value.replace(/<img[^>]*>/g,"");

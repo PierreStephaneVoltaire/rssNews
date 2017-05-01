@@ -18,7 +18,7 @@ export class HttpNews {
   
 url:string;
   constructor(public http: Http) {
-    console.log('Hello HttpNews Provider');
+   
   }
 setUrl(url:string){this.url="https://cors-anywhere.herokuapp.com/"+url;}
 getUrl():Observable<Object> {
@@ -39,7 +39,7 @@ parseFeed(feed:string):any[]{
                 newsItem.setDescription($(this).find('description').text());
               feeds.push(newsItem);
     }  );
-    console.log("in the parsing method of the news service",feeds)
+  
     return feeds;
 }
 

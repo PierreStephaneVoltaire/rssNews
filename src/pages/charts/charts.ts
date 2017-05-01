@@ -33,6 +33,7 @@ chartData: any[] ;
 let temparr:any[]=[];
 let tempDataArr:number[]=[];
 let tempFeedArr:number[]=[];
+    //i know i could have used the array and just looked at the index bu i found jquery a little bit more convenient because of the two variables
     $.each(arrOfObj,function(index,value){
 let temp=0;
 temparr.push(value.name);
@@ -43,10 +44,6 @@ temp+=rss.feed.length;
 });
 tempFeedArr.push(temp);
 });
- temparr.push("");
-tempDataArr.push(0);
-console.log(temparr);
-console.log(tempDataArr);
     this.chartLabels =$.makeArray(temparr);
     this.chartData= [
     { data: tempDataArr, label: 'Number of cactegories'
@@ -60,7 +57,7 @@ console.log(tempDataArr);
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad Charts');
+   
   }
 
 }

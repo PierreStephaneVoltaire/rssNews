@@ -1,20 +1,28 @@
-import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
-import { Storage } from '@ionic/storage';
-@Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+import {
+ Component
+}
+from '@angular/core';
+import {
+ NavController
+}
+from 'ionic-angular';
+import {
+ Storage
+}
+from '@ionic/storage';@
+Component({
+ selector: 'page-home'
+ , templateUrl: 'home.html'
 })
 export class HomePage {
-
-  constructor(public navCtrl: NavController,storage: Storage) {
- storage.ready().then(() => {  
- let jsonobj:string=null;
-     storage.get('jsonobj').then((val) => {
-         jsonobj=val;
-       });
-     if (jsonobj==null){
-         let jsonstring:string=`{
+ constructor(public navCtrl: NavController, storage: Storage) {
+  storage.ready().then(() => {
+   let jsonobj: string = null;
+   storage.get('jsonobj').then((val) => {
+    jsonobj = val;
+   });
+   if (jsonobj == null) {
+    let jsonstring: string = `{
 	"news": [{
 			"name": "cbc"
 			, "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/CBC_News_Logo.svg/175px-CBC_News_Logo.svg.png"
@@ -373,15 +381,8 @@ export class HomePage {
 							, "link": "http://winnipeg.ctvnews.ca/rss/winnipeg"
 			}
 					]
-		}
-
-
-
-
-			   ]
+		}		   ]
 	},
-
-
 
 		{
 			"name": "cnn"
@@ -432,11 +433,8 @@ export class HomePage {
 		}]
 	}]
 }`;
-		 
-	  storage.set('jsonobj', jsonstring);	 
-     }
- 
- });
-  }
-
+    storage.set('jsonobj', jsonstring);
+   }
+  });
+ }
 }

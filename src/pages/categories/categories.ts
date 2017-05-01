@@ -22,10 +22,10 @@ Item:any;
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad Categories');
+   
   }
 getNewsArticles(feeds):void{
-    console.log("url:",feeds)
+   
     this.news.setUrl(feeds);
     let links=this.news.getUrl();
   this.navCtrl.push(Feeds, {

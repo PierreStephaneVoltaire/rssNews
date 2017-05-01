@@ -29,15 +29,13 @@ Item:NewsItem[];
     return item.getDescription().toUpperCase().includes(input)||item.getTitle().toUpperCase().includes(input)||item.getAuthor().toUpperCase().includes(input);
   }
 filter(input:string):void{
-    console.log("in FILTER");
-    console.log(this.Item);
+    
     
 if(input==null||input.trim()==""){
    this.navParams.get("Item").subscribe(result => this.Item = result);
 }
 else{
 
-  console.log(this.Item);
  this.Item = this.Item.filter(item=>{
         return this.check(input.toUpperCase(),item);
       });
@@ -48,7 +46,7 @@ else{
 itemIsSelected(event, feeds:string):void{
 
    var url = feeds;
-   var target = '_self';
+   var target = '_blank';
   
   this.iab.create(url,target);
 
